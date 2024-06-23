@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: dvdq9zpag-python-gitops
+  description: This is GitOps manifest for dvdq9zpag-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: dvdq9zpag-python
+    janus-idp.io/tekton: dvdq9zpag-python 
+    backstage.io/kubernetes-id: dvdq9zpag-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:dvdq9zpag-python
